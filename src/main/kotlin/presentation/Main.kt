@@ -23,7 +23,8 @@ fun main() {
     val parsedPersonList = personHandler.parsePersonList(personList)
     pdfHandler.createPdfTable(
         "result.pdf", personRepository.getPersonFields(), parsedPersonList)
-    print("Файл создан. Путь: C:\\Users\\Alina\\IdeaProjects\\PDFtable\\result.pdf")
+    val dir : String = System.getProperty("user.dir");
+    print("Файл создан. Путь: $dir")
 }
 
 fun initPersonRepository(): PersonRepository {
